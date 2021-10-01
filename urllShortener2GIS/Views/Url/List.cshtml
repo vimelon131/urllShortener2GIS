@@ -1,0 +1,28 @@
+﻿@model IEnumerable<urllShortener2GIS.Models.Url>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.shortURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.longURL)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.shortURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.longURL)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

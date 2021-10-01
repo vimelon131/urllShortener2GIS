@@ -1,0 +1,172 @@
+﻿body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1040px;
+    margin: auto;
+}
+
+/*-- Header --*/
+
+.logo-link {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav {
+    width: 800px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-family: inherit;
+    text-decoration: none;
+    color: white;
+}
+
+    .nav-link:hover {
+        color: #9b9b9b;
+    }
+
+.header {
+    background-color: #5683DC;
+    height: 80px;
+    margin: 0;
+    padding: 0 40px;
+}
+
+/*-- Main --*/
+
+.main-text {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/*-- Form --*/
+
+#enter-form {
+    display: flex;
+    width: 660px;
+    margin: auto;
+    position: relative;
+}
+
+.input-url, #input-url {
+    width: 600px;
+    height: 40px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid rgb(136, 135, 135);
+    border-right: none;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+    .input-url,#input-url:focus {
+        outline: none;
+    }
+
+.shortened-link {
+    margin: auto;
+    width: 660px;
+    position: relative;
+}
+
+.shortened {
+    border-radius: 25px;
+    border: 1px solid grey;
+    width: 660px;
+    margin: auto;
+}
+
+.btn-submit {
+    background: url("../img/scissor_icon.png") no-repeat center;
+    background-size: 50% 50%;
+    background-color: #5683DC;
+    width: 60px;
+    height: 40px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    border-left: none;
+}
+
+    .btn-submit:hover {
+        background-color: #3d6fd3;
+        cursor: pointer;
+    }
+
+.wrong-input {
+    position: absolute;
+    z-index: 100;
+    bottom: -20px;
+    left: 20px;
+    font-size: 15px;
+    color: #c22121;
+    display: none;
+}
+
+.wrong-input-opened {
+    display: flex;
+}
+
+.redirect-link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #5683DC;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+    .redirect-link:hover {
+        background-color: #3d6fd3;
+    }
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 20px;
+    background-color: #5683DC;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+    .copy-btn:hover {
+        background-color: #3d6fd3;
+    }
+
+.table {
+    width: 600px;
+    margin: auto;
+}
+
+.table tr th {
+    border-bottom: 1px solid #000;
+    background-color: white;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #dcdee4;
+}
+
+.table tr td:nth-child(2) {
+    width: 300px;
+}

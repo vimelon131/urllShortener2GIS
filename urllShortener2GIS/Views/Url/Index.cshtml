@@ -1,0 +1,21 @@
+﻿@model urllShortener2GIS.Models.Url
+<h2 class="main-text">Shorten your link.</h2>
+<form asp-controller="Url" asp-action="Create" id="enter-form">
+    <input id="input-url" asp-for="longURL" placeholder="Enter your link..">
+    <button class="btn-submit" type="submit"></button>
+    <span id="empty" class="wrong-input">You can't leave this field empty!</span>
+    <span id="wrong" class="wrong-input">It is not valid url!</span>
+</form>
+<h2 class="main-text">Your shortened link:</h2>
+@if (Model != null)
+{
+<div class="shortened-link">
+    <input class="input-url shortened" asp-for="shortURL" placeholder="https://localhost:44308/">
+    <button type="button" class="copy-btn">copy</button>
+    <a href="@Model.shortURL" class="redirect-link">Go!</a>
+</div>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
