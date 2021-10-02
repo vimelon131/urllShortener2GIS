@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -112,7 +113,7 @@ nav {
     z-index: 100;
     bottom: -20px;
     left: 20px;
-    font-size: 15px;
+    font-size: 13px;
     color: #c22121;
     display: none;
 }
@@ -142,7 +143,6 @@ nav {
     position: absolute;
     top: 10px;
     right: 15px;
-    height: 20px;
     background-color: #5683DC;
     border-radius: 10px;
     cursor: pointer;
@@ -158,15 +158,47 @@ nav {
     margin: auto;
 }
 
-.table tr th {
-    border-bottom: 1px solid #000;
-    background-color: white;
+    .table tr th {
+        border-bottom: 1px solid #000;
+        background-color: white;
+    }
+
+    .table tr:nth-child(odd) {
+        background-color: #dcdee4;
+    }
+
+    .table tr td:nth-child(2) {
+        width: 300px;
+    }
+
+.empty-link {
+    background-color: #d6d5d5;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    opacity: 0;
+    width: 120px;
+    margin: 10px auto;
+    font-size: 9px;
+    transition: 0.5s;
 }
 
-.table tr:nth-child(odd) {
-    background-color: #dcdee4;
+.empty-link-opened {
+    opacity: 100%;
 }
 
-.table tr td:nth-child(2) {
-    width: 300px;
+.empty-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 5px solid #d6d5d5;
+    transform: translate(-50%, 0);
 }
