@@ -59,16 +59,9 @@ namespace urllShortener2GIS.Controllers
         private string getShortUrl()
         {
             UriBuilder newUri = new UriBuilder("https://localhost:44308/");
-            string res = "";
             string dictionary = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             Random rnd = new Random();
-            for (int i = 0; i < 6; i++)
-            {
-                int index = rnd.Next(dictionary.Length);
-                res += dictionary[index];
-            }
-            newUri.Path = res;
-
+            newUri.Path = new string(Enumerable.Repeat(dictionary, 6).Select(x => x[rnd.Next(x.Length)]).ToArray());
             return newUri.ToString();
         }
         
