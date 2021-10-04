@@ -154,7 +154,7 @@ nav {
     }
 
 .table {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -168,7 +168,26 @@ nav {
     }
 
     .table tr td:nth-child(2) {
-        width: 300px;
+        max-width: 400px;
+        overflow:hidden;
+    }
+
+.back-btn {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    background-color: #5683DC;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+
+    font-size: 15px;
+    text-decoration: none;
+    font-family: inherit;
+    color: #fff;
+}
+    .back-btn:hover {
+        background-color: #3d6fd3;
     }
 
 .empty-link {
